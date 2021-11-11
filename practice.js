@@ -134,5 +134,67 @@ function lookUpProfile(name, prop) {
 
 lookUpProfile("Akira", "likes");
 
-//
+// Change randomFraction to return a random number instead of returning 0.
+
+function randomFraction() {
+
+  // Only change code below this line
+const random = Math.random();
+  return random;
+
+  // Only change code above this line
+}
+
+// Use this technique to generate and return a random whole number between 0 and 9.
+
+function randomWholeNum() {
+
+  // Only change code below this line
+
+  return Math.floor(Math.random() * 10);
+}
+
+// Create a function called randomRange that takes a range myMin and myMax and returns a random whole number that's greater than or equal to myMin, and is less than or equal to myMax, inclusive.
+
+function randomRange(myMin, myMax) {
+  // Only change code below this line
+  return Math.floor(Math.random() * (myMax - myMin + 1)) + myMin;
+  // Only change code above this line
+}
+
+// Use parseInt() in the convertToInteger function so it converts the input string str into an integer, and returns it.
+
+function convertToInteger(str) {
+  return parseInt(str)
+}
+
+convertToInteger("56");
+
+// Use parseInt() in the convertToInteger function so it converts a binary number to an integer and returns it.
+
+function convertToInteger(str) {
+  return parseInt(str, 2);
+}
+
+convertToInteger("10011");
+
+//Use the conditional operator in the checkEqual function to check if two numbers are equal or not. The function should return either the string Equal or the string Not Equal.
+
+function checkEqual(a, b) {
+  return a === b ? 'Equal' : 'Not Equal'
+}
+
+checkEqual(1, 2);
+
+// In the checkSign function, use multiple conditional operators - following the recommended format used in findGreaterOrEqual - to check if a number is positive, negative or zero. The function should return positive, negative or zero.
+
+function checkSign(num) {
+  return (num > 0) ? 'positive'
+  : (num < 0) ? 'negative'
+  : 'zero';
+ }
+ 
+ checkSign(10);
+
+ // 
 
