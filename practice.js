@@ -221,5 +221,3 @@ function rangeOfNumbers(startNum, endNum) {
   }
 }
 
-//
-
