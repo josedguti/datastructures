@@ -64,6 +64,53 @@ Write a function which takes a ROT13 encoded string as input and returns a decod
 
 All letters will be uppercase. Do not transform any non-alphabetic character (i.e. spaces, punctuation), but do pass them on. */
 
+const alphabet = [
+    'A',
+    'B',
+    'C',
+    'D',
+    'E',
+    'F',
+    'G',
+    'H',
+    'I',
+    'J',
+    'K',
+    'L',
+    'M',
+    'N',
+    'O',
+    'P',
+    'Q',
+    'R',
+    'S',
+    'T',
+    'U',
+    'V',
+    'W',
+    'X',
+    'Y',
+    'Z'
+  ];
+  
+  function rot13(str) {
+  
+    let accumulator = '';
+  
+   for (let i = 0; i < str.length; i++) {
+     const letter = alphabet.includes(str[i]);
+     if (letter === false) {
+       accumulator += str[i];
+     } else {
+       const index = alphabet.findIndex((c) => c === str[i]);
+       accumulator += alphabet[index + 13] || alphabet[index - 13];
+     }
+   }
+    return accumulator;
+  }
+  
+  rot13("SERR PBQR PNZC");
 
+  //
 
 
